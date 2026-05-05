@@ -1,0 +1,106 @@
+{
+  "type": "pentest",
+  "kicker": "Home Defense",
+  "title": "Home Network Security Report",
+  "generated_at": "2026-05-05 16:42 CDT (auto-generated)",
+  "timestamp_utc": "2026-05-05T21:42:45Z",
+  "summary": "Weekly automated scan of the home network. 10 live hosts enumerated. 1 finding(s) flagged; 3 recommendation(s).",
+  "network_map": [
+    {
+      "ip": "10.0.0.1",
+      "label": "Router \u00b7 NETGEAR Router",
+      "open_ports": [
+        "53",
+        "80",
+        "631",
+        "5000",
+        "9100",
+        "53",
+        "80",
+        "5000"
+      ],
+      "notes": "jetdirect, ipp, domain, tcpwrapped"
+    },
+    {
+      "ip": "10.0.0.2",
+      "label": "Unknown device",
+      "open_ports": [
+        "8888"
+      ],
+      "notes": "tcpwrapped"
+    },
+    {
+      "ip": "10.0.0.3",
+      "label": "Microsoft",
+      "open_ports": [
+        "\u2014"
+      ],
+      "notes": "No services on top-100 scan"
+    },
+    {
+      "ip": "10.0.0.4",
+      "label": "Dyson Limited",
+      "open_ports": [
+        "\u2014"
+      ],
+      "notes": "No services on top-100 scan"
+    },
+    {
+      "ip": "10.0.0.5",
+      "label": "Unknown device",
+      "open_ports": [
+        "49152"
+      ],
+      "notes": "tcpwrapped"
+    },
+    {
+      "ip": "10.0.0.7",
+      "label": "Fn-Link Technology",
+      "open_ports": [
+        "\u2014"
+      ],
+      "notes": "No services on top-100 scan"
+    },
+    {
+      "ip": "10.0.0.10",
+      "label": "Unknown device",
+      "open_ports": [
+        "22",
+        "8888"
+      ],
+      "notes": "ssh, http"
+    },
+    {
+      "ip": "10.0.0.11",
+      "label": "Unknown device",
+      "open_ports": [
+        "\u2014"
+      ],
+      "notes": "No services on top-100 scan"
+    },
+    {
+      "ip": "10.0.0.12",
+      "label": "Lg Innotek",
+      "open_ports": [
+        "\u2014"
+      ],
+      "notes": "No services on top-100 scan"
+    },
+    {
+      "ip": "10.0.0.13",
+      "label": "Intel Corporate",
+      "open_ports": [
+        "\u2014"
+      ],
+      "notes": "No services on top-100 scan"
+    }
+  ],
+  "key_findings": [
+    "Router (10.0.0.1) admin available over plain HTTP only \u2014 credentials sent in clear."
+  ],
+  "recommendations": [
+    "Enable HTTPS on router admin or restrict admin to local SSH-tunneled access only.",
+    "Confirm WPA3 is enabled on the WiFi (Settings \u2192 Wireless \u2192 Security).",
+    "Disable UPnP on the router unless a specific app requires it."
+  ]
+}
